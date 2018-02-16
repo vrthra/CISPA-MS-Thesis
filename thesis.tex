@@ -1,0 +1,149 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                   %%
+%%    Thesis and Term Paper Template                                 %%
+%%    Created by Nataniel P. Borges Jr.                              %%
+%%                                                                   %%
+%%    Adapted from:                                                  %%
+%%    http://www.coli.uni-saarland.de/~afried/files/Term%20Paper.zip %%
+%%                                                                   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% For thesis
+%\documentclass[pdftex,12pt,twoside,openright,a4]{memoir}
+% For proposal 
+\documentclass[pdftex,12pt,twoside,openany,a4paper]{memoir}
+
+
+\input{preambulo.tex}
+
+\begin{document}
+	
+	\input{bureaucracy.tex}
+	
+	\chapter{Introduction}
+	\label{chap:introduction}
+	
+    {\Large\color{red}{THE STRUCTURE OF THE WORK IN THIS DOCUMENT IS JUST A SKETCH, IT IS NOT NECESSARY TO FOLLOW THESE SECTIONS AND/OR ORDER. ADAPT IT TO YOUR OWN NEEDS}}
+        
+	\lipsum[2-4]
+		
+	\FloatBarrier
+	
+	\chapter{Background}
+	\label{chap:background}
+
+	\lipsum[5]
+
+	\textbf{Referencing figures:} Figure \ref{fig:background:example_1}. For subfigures: Figure \ref{fig:background:example_2} or Figure \ref{fig:background:example_2:1} \citep{example}\footnote{This is a footnote}.
+
+	\begin{figure}[htb]
+		\centering
+			\begin{lstlisting}[language=XML,basicstyle=\small]
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+package="com.example.testapp" >
+ <uses-permission android:name="android.permission.READ_CONTACTS"/>
+  ...
+</manifest>
+			\end{lstlisting}
+		\caption{Figure example}
+		\label{fig:background:example_1}
+	\end{figure}
+	
+	\begin{figure}[hbtp]
+		\centering
+		\subfloat[First subfigure\label{fig:background:example_2:1}]{
+			\includegraphics[width=0.4\linewidth]{figures/cispa}
+		}
+		\hspace{1cm}
+		\subfloat[Second subfigure\label{fig:background:example_2:2}]{
+			\includegraphics[width=0.4\linewidth]{figures/cispa}
+		}
+		\caption{Subfloat example}
+		\label{fig:background:example_2}
+	\end{figure}
+	
+	\chapter{Related Work}
+	\label{chap:related_work}
+	
+	\lipsum[9-13]
+	
+	\chapter{WORK}
+	\label{chap:work}
+	
+	\lipsum[10-11]
+		
+	\begin{algorithm}[hbtp]
+		\caption{Example of algorithm}
+		\label{alg:work:code}
+		\begin{algorithmic}
+			\STATE $file \gets \text{some\ configuration\ file}$
+			\STATE $\textbf{launch}\ \text{\textit{A}}$
+			\STATE $\textbf{click}(\text{\textit{B}})$
+			\STATE $\textbf{click}(\text{\textit{C}})$
+			\STATE $\textbf{set\ text}(\text{\textit{D,\ \"abc\"}})$
+			\STATE $\textbf{click}(\text{\textit{Ok}})$
+			
+			\WHILE {$is\ loading$}
+			\STATE $wait$
+			\ENDWHILE
+			
+			\STATE $\textbf{click}(\text{\textit{Finish}})$
+			\STATE $\textbf{click}(\text{\textit{Exit}})$
+		\end{algorithmic}
+	\end{algorithm}    
+		
+	\FloatBarrier
+	
+	\chapter{Evaluation/Experiments}
+	\label{chap:evaluation}
+	
+	\lipsum[12-14]
+	
+	\begin{sidewaysfigure}[hbtp]
+		\centering
+		\includegraphics[scale=0.9]{figures/cispa}
+		\caption{Sideways figure example}
+		\label{fig:evaluation:example_1}
+	\end{sidewaysfigure}
+	
+	\begin{table}[htbp]
+		\centering
+		\caption{Table example}
+		\label{tab:evaluation:table_1}		
+		\begin{footnotesize}
+			\begin{tabular}{l|r|r}
+				\textbf{Col A} & \textbf{Col B} & \textbf{Col C} \\ \hline
+				Row 1 & 587 & 0 \\
+				Row 2 & 69 & 0 \\ 
+				Row 3 & 253 & 0 \\ 
+				Row 1 and 2 & 613 & 0 \\ 
+				Row 1, 2 and 3 & 866 & 0 \\  
+			\end{tabular}
+		\end{footnotesize}
+	\end{table}
+	
+	\FloatBarrier
+	
+	\chapter{Conclusion and Future Work}
+	\label{chap:conclusion}
+	
+	\lipsum[15]
+	
+	\FloatBarrier
+	
+	\bibliographystyle{apalike}
+	\bibliography{literature}
+	
+	\FloatBarrier
+	
+	% IF NECESSARY
+	\appendix
+	\appendixpage
+		
+	\chapter{Chapter 1 of the appendix}
+	\label{chap:appendix:explored}
+	
+	If necessary add an appendix.
+	
+\end{document}
+

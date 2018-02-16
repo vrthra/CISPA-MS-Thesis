@@ -1,0 +1,160 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% PACKAGES %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% DEFAULT %%%%%
+
+% UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Support for non-English words
+\usepackage[T1]{fontenc}
+\usepackage[dvips]{graphicx}
+\usepackage{xcolor}
+% Font Helvetica
+\usepackage{helvet}
+
+% Template
+% Enables placing a figure at the position where it occurs in the text by using [H]
+\usepackage{here}
+% Sophisticated citation. Check out: http://merkel.zoneo.net/Latex/natbib.php
+\usepackage{natbib}
+
+% Adjust margin of paper.
+\usepackage{geometry}
+
+%%%%% EXTRAS %%%%%
+
+% Multi column data
+\usepackage{multicol}
+% Multi row data
+\usepackage{multirow}
+% Packages for equations
+\usepackage{amssymb}
+\usepackage{amsmath}
+% Enable \FloatBarrier command
+\usepackage{placeins}
+
+% Other packages
+\usepackage{listings}
+% Enable \todo command for review
+\usepackage{todonotes}
+% Subfig command (replaces subfigure)
+\usepackage{subfig}
+% Environments for algorithms
+\usepackage{algorithm}
+\usepackage{algorithmic}
+% Rotate figured and tables
+\usepackage{rotating}
+% Tikz diagrams (configure below)
+\usepackage{tikz}
+\usepackage{pgfplots}
+% Pie plots (local file)
+\usepackage{pgf-pie}
+% Frame environment
+\usepackage{framed}
+% Enable \justify command
+\usepackage{ragged2e}
+% Allow pdfs to be inserted into the document
+\usepackage{pdfpages}
+
+% Reference (can replace black for blue color on digital version)
+\usepackage[
+breaklinks=true,colorlinks=true,
+%linkcolor=blue,urlcolor=blue,citecolor=blue,% PDF VIEW
+linkcolor=black,urlcolor=black,citecolor=black,% PRINT
+bookmarks=true,bookmarksopenlevel=2]{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% CONFIGURATION %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Adjust margin of paper.
+\geometry{a4paper, top=25mm, left=25mm, right=25mm, bottom=25mm}
+
+% Line spacing (reccomended 1.25) %
+\linespread{1.2}
+
+%Table of contents and numbering depth:
+%curr: chapters, sections, and subsections are numbered
+\maxsecnumdepth{subsubsection} 
+\maxtocdepth{subsubsection}
+
+% paragraph and indent
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2ex plus 0.5ex minus 0.2ex}
+
+% Abstract font size
+\renewcommand{\abstractnamefont}{\Large\bfseries}
+
+% Chapter style
+\chapterstyle{section}
+% Style of sections, subsections and subsubsections
+\setsecheadstyle{\Large\bfseries\raggedright}
+\setsubsecheadstyle{\large\bfseries\raggedright}
+\setsubsubsecheadstyle{\bfseries\raggedright}
+
+% Fix pgfplot version (prevent errors)
+\pgfplotsset{compat=1.13}
+
+%%% Page numbering STYLE OF PAGES NUMBERING
+% Other styles: companion, headings, Ruled...
+% Extra option: \nouppercaseheads
+\makeevenhead{plain}{}{}{\thepage}
+\makeoddhead{plain}{\thepage}{}{}
+%\makeevenfoot{plain}{\thepage}{}{} 
+%\makeoddfoot{plain}{}{}{\thepage} 
+\pagestyle{plain}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% lstlisting ENV %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% New colors
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+% Updating code style for everything
+\lstset{
+  backgroundcolor=\color{white},% choose the background color
+  basicstyle=\footnotesize,     % size of fonts used for the code
+  breaklines=true,              % automatic line breaking only at whitespace
+  captionpos=b,                 % sets the caption-position to bottom
+  commentstyle=\color{mygray},  % comment style
+  escapeinside={\%*}{*)},       % if you want to add LaTeX within your code
+  keywordstyle=\color{blue},    % keyword style
+  stringstyle=\color{mygreen},  % string literal style
+}
+
+% XML code format
+\definecolor{maroon}{rgb}{0.5,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\lstdefinelanguage{XML}
+{
+  basicstyle=\ttfamily,
+  morestring=[s]{"}{"},
+  morecomment=[s]{?}{?},
+  morecomment=[s]{!--}{--},
+  commentstyle=\color{darkgreen},
+  moredelim=[s][\color{black}]{>}{<},
+  moredelim=[s][\color{red}]{\ }{=},
+  stringstyle=\color{blue},
+  identifierstyle=\color{maroon}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% TIKZ CFG %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pending....
+
+% Tikz config
+%\usetikzlibrary{arrows,shapes}
+%\tikzstyle{format} = [draw, thin, fill=blue!20]
+%\tikzstyle{medium} = [ellipse, draw, thin, fill=green!20, minimum height=2.5em]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% TEMPLATE %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{lipsum}

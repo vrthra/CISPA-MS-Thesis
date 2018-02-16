@@ -1,0 +1,45 @@
+\frontmatter*
+
+% Author, advisor and reviewer
+\input{configuration.tex}
+
+% JUST FOR PROPOSAL, COMMENT WHEN WRITTING THE THESIS
+\input{title_proposal.tex}
+\cleardoublepage
+
+% JUST FOR THESIS, COMMENT WHEN WRITTING THE PROPOSAL
+\input{title_thesis.tex}
+\cleardoublepage
+
+% Abstract
+\input{abstract.tex}
+\cleardoublepage
+
+% Statement (declaration of consent)	
+% JUST FOR THESIS, COMMENT WHEN WRITTING THE PROPOSAL
+\input{consent.tex}	
+\cleardoublepage
+
+\makeevenhead{plain}{}{}{}
+\makeoddhead{plain}{}{}{}
+
+% ToC	
+\tableofcontents*
+\cleardoublepage
+
+% List of figures
+\listoffigures*
+\cleardoublepage
+	
+% List of tables
+\listoftables*
+\cleardoublepage
+
+% Start of content
+\mainmatter*
+% Restart page nr. to 1
+\setcounter{page}{1} 
+\pagenumbering{arabic}
+\makeevenhead{plain}{}{}{\thepage}
+\makeoddhead{plain}{\thepage}{}{}
+\pagestyle{plain}
